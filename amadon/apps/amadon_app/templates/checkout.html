@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+			color: white;
+			background-color: rgb(0, 162, 255);
+		}
+		
+		
+
+	</style>
+		<title>store checkout</title>
+</head>
+<body>
+<h1>STORE CHECKOUT</h1>
+<h2>Thank!</h2>
+<p>${{request.session.purchase}}.</p>
+<p>
+You have {{request.session.item_count}} items so far ${{request.session.total_spent}} spent!
+</p>
+<button><a href="/">home</a></button>
+<br>
+<button><a href="clear">empty</a></button>
+</body>
+</html>

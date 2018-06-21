@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>SHOP DOJO</title>
+
+	<style>
+		*{
+			background-color: rgb(59, 59, 59);
+			color: rgb(43, 99, 255);
+			text-align: center;
+		}
+		h1{
+ 			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+			color: white;
+			background-color:rgb(0, 204, 255);
+		}
+
+		button{
+			color: white;
+			background-color: blue;
+		}
+		table{
+ 			border: 10px solid rgb(0, 183, 255);
+			align-content: center;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+<h1>STORE</h1>
+<td><img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5a6a59641ffc8700012341d3/0x0.png" alt="item pics" width="200" height="200"></td>
+
+
+
+<table style="border="1" width="100%" ID="Table1"">
+	
+	
+	<span><tbody>
+
+<br>
+<tr>
+<tr>
+
+	<td>
+		<img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/19260267_1704676716213482_5110238828262263309_n.jpg?_nc_cat=0&oh=eb0752919eda45dadef0dc5989aaeedb&oe=5BA2DB56"
+		    alt="hoodie" width="200" height="200">
+	</td>
+	<td>Dojo hoodie</td>
+	<td>ON SALE 19.99!</td>
+	<form action='buy' method='post'>
+		{% csrf_token %}
+		<td>
+		<select name='quantity'>
+		<option value='1'>1</option>
+		<option value='2'>2</option>
+		<option value='3'>3</option>
+		</select>
+		</td>
+		<td>
+			<input type="hidden" name="product_id" value='1001'>
+			<input type="submit" name="submit" value="Buy">
+		</td>
+	</form>
+</tr>
+<tr>
+	<td><img src="https://i.pinimg.com/736x/79/b7/6f/79b76f3764d79748e8a750e7b1c48fcc.jpg" alt="book" width="200" height="200"></td>
+		<td>Coding Book</td>
+			<td>$49.99</td>
+	<form action='buy' method='post'>
+		{% csrf_token %}
+		<td>
+		<select name='quantity'>
+		<option value='1'>1</option>
+		<option value='2'>2</option>
+		<option value='3'>3</option>
+		</select>
+		</td>
+		<td>
+			<input type="hidden" name="product_id" value='1002'>
+			<input type="submit" name="submit" value="Buy">
+		</td>
+	</form>
+</tr>
+
+<tr>
+<td>
+	<img src="https://i.pinimg.com/736x/c9/ef/81/c9ef813c7aa9cb3ebe8e0c5f47949209.jpg" alt="cup" width="200" height="200">
+</td>
+	<td>Code Cup</td>
+	<td>$4.99</td>
+	<form action='buy' method='post'>
+		{% csrf_token %}
+		<td>
+			<select name='quantity'>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+			</select>
+		</td>
+		<td>
+				<input type="hidden" name="product_id" value='1003'>
+				<input type="submit" name="submit" value="Buy">
+			</td>
+		
+	</span>
+	</tbody></bd>
+</table>
+</body>
+</html>
